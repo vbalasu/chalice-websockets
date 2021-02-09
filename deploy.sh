@@ -1,0 +1,2 @@
+export AWS_PROFILE=vbalasubramaniam_awscli
+time chalice deploy

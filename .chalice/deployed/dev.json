@@ -1,0 +1,33 @@
+{
+  "resources": [
+    {
+      "name": "default-role",
+      "resource_type": "iam_role",
+      "role_arn": "arn:aws:iam::163305015547:role/chalice-websockets-dev",
+      "role_name": "chalice-websockets-dev"
+    },
+    {
+      "name": "websocket_connect",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-west-2:163305015547:function:chalice-websockets-dev-websocket_connect"
+    },
+    {
+      "name": "websocket_message",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-west-2:163305015547:function:chalice-websockets-dev-websocket_message"
+    },
+    {
+      "name": "websocket_disconnect",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-west-2:163305015547:function:chalice-websockets-dev-websocket_disconnect"
+    },
+    {
+      "name": "websocket_api",
+      "resource_type": "websocket_api",
+      "websocket_api_url": "wss://akpgdwbu6b.execute-api.us-west-2.amazonaws.com/api/",
+      "websocket_api_id": "akpgdwbu6b"
+    }
+  ],
+  "schema_version": "2.0",
+  "backend": "api"
+}
