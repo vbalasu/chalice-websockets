@@ -25,6 +25,14 @@ def send_message():
         apig.post_to_connection(Data=app.current_request.query_params['message'], ConnectionId=connection['connection_id'])
     return True
 
+# USAGE: http post http://127.0.0.1:8000/run_command command:='["ls", "-l"]'
+# USAGE: http post $(chalice url)run_command command:='["env"]'
+@app.route('/run_command', methods=['POST'])
+def run_command():
+    import subprocess
+    #print(app.current_request.json_body)
+    return subprocess.check_output(app.current_request.json_body['command']).decode()
+
 @app.on_ws_disconnect()
 def disconnect(event):
     response = requests.delete(f'http://35.233.160.178:3000/websocket_connections?connection_id=eq.{event.connection_id}')
