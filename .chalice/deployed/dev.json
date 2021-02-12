@@ -7,6 +7,17 @@
       "role_name": "chalice-websockets-dev"
     },
     {
+      "name": "api_handler",
+      "resource_type": "lambda_function",
+      "lambda_arn": "arn:aws:lambda:us-west-2:163305015547:function:chalice-websockets-dev"
+    },
+    {
+      "name": "rest_api",
+      "resource_type": "rest_api",
+      "rest_api_id": "s712z3jsk0",
+      "rest_api_url": "https://s712z3jsk0.execute-api.us-west-2.amazonaws.com/api/"
+    },
+    {
       "name": "websocket_connect",
       "resource_type": "lambda_function",
       "lambda_arn": "arn:aws:lambda:us-west-2:163305015547:function:chalice-websockets-dev-websocket_connect"
